@@ -18,6 +18,7 @@ const buttonVariants = cva(
         hero: "bg-gradient-to-r from-primary to-secondary-accent text-white font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 border-0",
         purchase: "bg-accent-bright text-white font-semibold hover:bg-accent-bright/90 shadow-md hover:shadow-lg transform hover:-translate-y-0.5",
         subscribe: "bg-secondary-accent text-white hover:bg-secondary-accent/90 font-medium",
+        cta: "bg-cta text-cta-foreground hover:bg-cta/90 font-medium rounded-full w-[317px] h-[55px] px-8 py-4 gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5",
       },
       size: {
         default: "h-10 px-4 py-2",

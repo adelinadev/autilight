@@ -9,8 +9,8 @@ const ArticlesSection = () => {
   const articles = [
     {
       id: "sensory-processing",
-      title: "Understanding Sensory Processing in Autism",
-      excerpt: "Explore how sensory differences impact daily life and discover effective strategies for creating sensory-friendly environments.",
+      title: "Стаття 1",
+      excerpt: "Простими словами про аутизм у дітей.",
       content: `Sensory processing differences are a core aspect of autism that significantly impact daily experiences. Many autistic individuals have heightened or reduced sensitivity to various sensory inputs including sounds, lights, textures, and movements.
 
 Understanding these differences is crucial for:
@@ -23,8 +23,8 @@ Key strategies include identifying personal sensory triggers, creating sensory b
     },
     {
       id: "communication-styles",
-      title: "Diverse Communication Styles in Autism",
-      excerpt: "Learn about the variety of communication methods used by autistic individuals and how to support effective interaction.",
+      title: "Стаття 2",
+      excerpt: "Простими словами про аутизм у дітей.",
       content: `Communication in autism is beautifully diverse, ranging from verbal speech to alternative communication methods. Understanding and respecting these differences is essential for meaningful connection.
 
 Communication may include:
@@ -38,8 +38,8 @@ Supporting communication involves patience, using clear and direct language, all
     },
     {
       id: "strengths-based",
-      title: "Embracing a Strengths-Based Approach",
-      excerpt: "Discover how focusing on strengths and interests can lead to better outcomes and increased self-esteem.",
+      title: "Стаття 3",
+      excerpt: "Простими словами про аутизм у дітей.",
       content: `A strengths-based approach recognizes that autism comes with unique abilities and perspectives that should be celebrated and nurtured. This positive framework shifts focus from deficits to possibilities.
 
 Common strengths in autism include:
@@ -54,8 +54,8 @@ Implementing this approach means building on natural interests, creating opportu
     },
     {
       id: "transition-support",
-      title: "Supporting Transitions and Changes",
-      excerpt: "Practical strategies for helping autistic individuals navigate changes in routine and environment.",
+      title: "Стаття 4",
+      excerpt: "Простими словами про аутизм у дітей.",
       content: `Transitions and unexpected changes can be particularly challenging for autistic individuals who often thrive on predictability and routine. Understanding this need and providing appropriate support is crucial.
 
 Effective transition support includes:
@@ -75,10 +75,10 @@ The goal is to build confidence and independence while respecting the need for s
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Helpful Articles
+            Корисні статті
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Evidence-based insights and practical advice from autism experts and community members
+            Доказові висновки та практичні поради від експертів з аутизму та членів спільноти
           </p>
         </div>
 

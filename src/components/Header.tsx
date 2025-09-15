@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,7 @@ const Header = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false); // Закриваємо мобільне меню після кліку
     }
   };
 
@@ -32,44 +34,40 @@ const Header = () => {
           /AUTILIGHT
         </button>
         
+        {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Button 
-            variant="ghost" 
-            onClick={() => scrollToSection('guides')}
-            className="hover:text-primary"
-          >
-            PDF Guides
-          </Button>
-          <Button 
-            variant="ghost" 
-            onClick={() => scrollToSection('about')}
-            className="hover:text-primary"
-          >
-            About
-          </Button>
-          <Button 
-            variant="ghost" 
-            onClick={() => scrollToSection('articles')}
-            className="hover:text-primary"
-          >
-            Articles
-          </Button>
-          <Button 
-            variant="ghost" 
-            onClick={() => scrollToSection('faq')}
-            className="hover:text-primary"
-          >
-            FAQ
-          </Button>
+          <a onClick={() => scrollToSection('guides')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">PDF Гайди</a>
+          <a onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">Про проєкт</a>
+          <a onClick={() => scrollToSection('articles')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">Статті</a>
+          <a onClick={() => scrollToSection('faq')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">FQA</a>
+          <Button variant="cta" onClick={() => scrollToSection('faq')} className="hover:text-primary">Отримати доступ за 349 грн</Button>
         </div>
 
         {/* Mobile menu button */}
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="md:hidden" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </Button>
       </nav>
+
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-md shadow-md">
+          <div className="flex flex-col space-y-4 px-4 py-6">
+            <a onClick={() => scrollToSection('guides')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">PDF Гайди</a>
+            <a onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">Про проєкт</a>
+            <a onClick={() => scrollToSection('articles')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">Статті</a>
+            <a onClick={() => scrollToSection('faq')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">FQA</a>
+            <Button variant="cta" onClick={() => scrollToSection('faq')} className="hover:text-primary">Отримати доступ за 349 грн</Button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

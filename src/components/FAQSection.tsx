@@ -4,118 +4,141 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import preview4 from '@/assets/preview-4.png';
+import preview5 from '@/assets/preview-5.png';
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const FAQSection = () => {
+  const { toast } = useToast();
+
   const faqs = [
     {
-      id: "what-is-autilight",
-      question: "What is AUTILIGHT and how can it help me?",
-      answer: `AUTILIGHT is a comprehensive resource platform designed to support autistic individuals, families, and caregivers with evidence-based information and practical tools. We provide PDF guides, articles, and resources created by autism experts and community advocates.
-
-Our platform helps by offering:
-• Accessible, research-backed information about autism
-• Practical strategies for daily challenges
-• Support for families navigating diagnosis and beyond
-• A neurodiversity-affirming approach that celebrates autistic strengths
-• 24/7 access to digital resources and support materials`
+      id: "when-to-contact-specialist",
+      question: "Коли потрібно звертатися до фахівця?",
+      answer: "Якщо ви помітили у дитини тривожні симптоми або сумніваєтесь у розвитку — не чекайте. Краще звернутися раніше до педіатра, невролога або дитячого психолога."
     },
     {
-      id: "who-creates-content",
-      question: "Who creates your content and how do you ensure quality?",
-      answer: `Our content is developed through collaboration between autism researchers, clinicians, autistic self-advocates, and families with lived experience. Every resource goes through a rigorous review process to ensure accuracy and practical relevance.
-
-Our quality assurance includes:
-• Review by board-certified professionals
-• Input from autistic community members
-• Regular updates based on latest research
-• Feedback incorporation from users
-• Cultural sensitivity and accessibility reviews`
+      id: "who-diagnoses-ras",
+      question: "Хто діагностує РАС?",
+      answer: "Діагноз розладу аутистичного спектру може поставити тільки кваліфікований спеціаліст після комплексного обстеження."
     },
     {
-      id: "age-range",
-      question: "What age ranges do your resources cover?",
-      answer: `Our resources span across the lifespan, from early childhood through adulthood. We recognize that autism support needs evolve throughout life, and our materials reflect this understanding.
-
-We cover:
-• Early childhood (2-5 years): Early intervention and support
-• School age (6-17 years): Educational strategies and social skills
-• Transition years (18-25 years): Moving to independence
-• Adulthood (25+ years): Workplace, relationships, and self-advocacy
-• Resources for parents, siblings, and extended family members`
+      id: "can-ras-be-cured",
+      question: "Чи можна виліковати РАС?",
+      answer: "РАС неможливо 'виліковати', але з правильною підтримкою та терапією можна значно покращити якість життя дитини."
     },
     {
-      id: "evidence-based",
-      question: "Are your strategies evidence-based?",
-      answer: `Absolutely. All our recommendations are grounded in current research and best practices in autism support. We prioritize approaches that have been scientifically validated while also honoring the lived experiences of autistic individuals.
-
-Our evidence-based approach includes:
-• References to peer-reviewed research
-• Alignment with professional guidelines (ASHA, AAP, etc.)
-• Input from autistic researchers and advocates
-• Regular review and updates as new evidence emerges
-• Focus on interventions that respect autistic autonomy and dignity`
+      id: "can-ras-be-influenced-second",
+      question: "Чи можна вплинути РАС?",
+      answer: "Так, рання діагностика та відповідна терапія можуть значно допомогти в розвитку дитини з аутизмом."
     },
     {
-      id: "cost-accessibility",
-      question: "Are there free resources available, and what about financial assistance?",
-      answer: `We believe autism support should be accessible to everyone. While our comprehensive PDF guides are premium resources, we offer several free options and assistance programs.
-
-Free resources include:
-• Basic articles and information sheets
-• Community forum access
-• Monthly newsletter with tips and updates
-• Free webinar series
-
-We also offer sliding scale pricing and scholarship programs for families facing financial hardship. Contact us to learn about assistance options.`
+      id: "what-methods-help",
+      question: "Які методи допомоги існують?",
+      answer: "Існує багато методів: поведінкова терапія, логопедична корекція, ерготерапія, сенсорна інтеграція та інші підходи."
     },
     {
-      id: "professional-use",
-      question: "Can professionals and educators use these resources?",
-      answer: `Yes! Our resources are designed to support both families and professionals working with autistic individuals. We offer institutional licensing and professional development materials.
-
-Professional benefits include:
-• Classroom and therapy implementation guides
-• Staff training materials
-• Progress tracking tools
-• Collaboration strategies with families
-• Professional development certificates
-• Bulk licensing options for schools and clinics`
+      id: "what-methods-help-second",
+      question: "Які методи допомоги існують?",
+      answer: "Кожна дитина унікальна, тому план терапії завжди індивідуальний та розробляється командою спеціалістів."
+    },
+    {
+      id: "do-vaccines-affect-ras",
+      question: "Чи впливають вакцини на розвиток РАС?",
+      answer: "Ні, численні наукові дослідження довели, що вакцини не викликають аутизм та не впливають на його розвиток."
+    },
+    {
+      id: "how-to-support-family",
+      question: "Як підтримати родину, якщо у дитини РАС?",
+      answer: "Важливо надати емоційну підтримку, практичну допомогу та допомогти знайти професійних спеціалістів."
     }
   ];
 
+  const handleGetGuide = () => {
+    toast({
+      title: "Redirecting to guide",
+      description: "Taking you to get the free guide",
+    });
+  };
+
   return (
-    <section id="faq" className="py-20 bg-background">
+    <section id="faq" className="py-20" style={{ backgroundColor: '#F3F4F6' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Frequently Asked Questions
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            А тут часті запитання
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Find answers to common questions about our resources and approach to autism support
-          </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq) => (
+        <div className="max-w-4xl mx-auto mb-20">
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, index) => (
               <AccordionItem 
                 key={faq.id} 
                 value={faq.id}
-                className="bg-card rounded-lg shadow-card hover:shadow-floating transition-all duration-300 border-0"
+                className="border-0"
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline text-left">
-                  <h3 className="text-lg font-semibold text-primary">
-                    {faq.question}
-                  </h3>
+                <AccordionTrigger 
+                  className="px-8 py-6 hover:no-underline text-left rounded-2xl text-white font-medium text-lg"
+                  style={{ 
+                    background: index === 0 
+                      ? 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)' 
+                      : 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)'
+                  }}
+                >
+                  <div className="flex items-center w-full">
+                    <span className="flex-1">{faq.question}</span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                <AccordionContent className="px-8 py-6 mt-2 rounded-2xl" style={{ 
+                  background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)'
+                }}>
+                  <div className="text-white leading-relaxed">
                     {faq.answer}
                   </div>
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="rounded-3xl p-6 md:p-8 lg:p-12 relative overflow-hidden" style={{ 
+          background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)'
+        }}>
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12">
+            <div className="flex-1 text-center lg:text-left lg:max-w-lg">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
+                Помітили щось тривожне?
+              </h3>
+              <p className="text-lg md:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed">
+                Завантажте гід і дізнайтесь, як вчасно підтримати розвиток вашої дитини.
+              </p>
+              <Button 
+                onClick={handleGetGuide}
+                className="bg-white hover:bg-gray-100 text-purple-700 font-bold py-4 px-8 rounded-full text-lg w-full sm:w-auto"
+              >
+                ОТРИМАТИ БЕЗКОШТОВНО
+              </Button>
+            </div>
+            <div className="flex-shrink-0 flex lg:justify-end">
+              <img 
+                src={preview4} 
+                alt="PDF Guide Preview" 
+                className="h-full w-auto absolute top-0 right-0 z-10 object-cover rounded-xl"
+              />
+              <img 
+                src={preview5} 
+                alt="PDF Guide Preview" 
+                className="h-full w-auto absolute top-50% right-90% z-10 object-cover rounded-xl"
+                style={{
+                  top: '70%',
+                  right: '20%'
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
