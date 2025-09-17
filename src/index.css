@@ -36,6 +36,7 @@
     --accent: 150 40% 85%;
     --accent-foreground: 150 40% 25%;
     --accent-bright: 150 60% 50%;
+    --button-text: 248 65% 17%;
 
     /* Status colors */
     --destructive: 0 70% 55%;

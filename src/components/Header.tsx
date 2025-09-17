@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import logoImage from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,20 +28,53 @@ const Header = () => {
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <button 
-          onClick={() => scrollToSection('hero')} 
-          className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
-        >
-          /AUTILIGHT
-        </button>
+          <button 
+            onClick={() => scrollToSection('hero')} 
+            className="hover:scale-105 transition-transform duration-300"
+            >
+            <img 
+              src={logoImage} 
+              alt="AUTILIGHT Logo" 
+              className="h-[40px] w-auto" // підлаштуй під розмір у макеті
+            />
+          </button>
         
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a onClick={() => scrollToSection('guides')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">PDF Гайди</a>
-          <a onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">Про проєкт</a>
-          <a onClick={() => scrollToSection('articles')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">Статті</a>
-          <a onClick={() => scrollToSection('faq')} className="text-foreground hover:text-primary transition-colors duration-300 font-medium cursor-pointer">FQA</a>
-          <Button variant="cta" onClick={() => scrollToSection('faq')} className="hover:text-primary">Отримати доступ за 349 грн</Button>
+        <a 
+            onClick={() => scrollToSection('guides')} 
+            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+          >
+            PDF Гайди
+          </a>
+          <a 
+            onClick={() => scrollToSection('about')} 
+            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+          >
+            Про проєкт
+          </a>
+          <a 
+            onClick={() => scrollToSection('articles')} 
+            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+          >
+            Статті
+          </a>
+          <a 
+            onClick={() => scrollToSection('faq')} 
+            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+          >
+            FAQ
+          </a>
+          <Button variant="cta" onClick={() => scrollToSection('faq')} className="
+                w-[317px] h-[55px] 
+                rounded-[56px] 
+                pt-[16px] pr-[32px] pb-[19px] pl-[32px] 
+                bg-[#FF3A3A] 
+                shadow-[0px_3px_12px_0px_#4A3AFF2E]
+                font-dm-sans font-normal text-[18px] leading-[20px] text-[#ffffff]
+                hover:scale-105 transition-transform duration-300">
+                  Отримати доступ за 349 грн
+          </Button>
         </div>
 
         {/* Mobile menu button */}

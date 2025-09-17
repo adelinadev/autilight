@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import heroImage from '@/assets/hero-bg.jpg';
+
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
@@ -25,21 +25,22 @@ const HeroSection = () => {
       id="hero" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `url(${heroImage})`,
+        background: `
+          radial-gradient(circle at 10% 90%, rgba(74, 58, 255, 0.35), transparent 20%),
+          radial-gradient(circle at 90% 20%, rgba(150, 45, 255, 0.35), transparent 20%),
+           #ffffff`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundPosition: 'center'
       }}
-    >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/20"></div>
+      >
       
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="text-center">
+          <div className="text-center mb-8">
             <h1 className="font-dm-sans font-bold text-[16px] leading-[18px] tracking-[0.24em] uppercase" style={{ color: "#4A3AFF" }}>
               безпечний простір для батьків
             </h1>
+            
             <h2 className="font-dm-sans text-[50px] font-bold" style={{ color: "#19213D" }}>
               Коли діагноз — не вирок
             </h2>
@@ -48,48 +49,76 @@ const HeroSection = () => {
             </h2>
           </div>
 
-          <p className="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-md max-w-2xl mx-auto leading-relaxed" style={{ color: "#19213D" }}>
-          Пояснюємо простими словами, що таке аутизм, як його розпізнати та з чого почати допомогу. Щоб ваша дитина мала більше шансів заговорити, контактувати, бути собою — у своєму темпі.
+          <p className="font-dm-sans  min-w-877 text-[18px] mb-8 text-white/90 drop-shadow-md mx-auto leading-relaxed" style={{ color: "#6F6C90" }}>
+            Пояснюємо простими словами, що таке аутизм, як його розпізнати та з чого почати допомогу.<br></br> 
+            Щоб ваша дитина мала більше шансів заговорити, контактувати, бути собою — у своєму темпі.
           </p>
-          
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+          <form onSubmit={handleSubmit} className="max-w-[700px] mx-auto relative">
             <Input
               type="email"
               placeholder="ваш e-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-white/90 backdrop-blur-sm border-white/20 text-foreground placeholder:text-muted-foreground"
               required
+              className="
+                w-full h-[78px] 
+                rounded-[60px] 
+                border border-[#EFF0F6] 
+                bg-[#FFFFFF] 
+                px-6
+                text-foreground placeholder:text-muted-foreground
+                shadow-[0px_8px_25px_0px_#0D0A2C0F]
+              "
             />
-            <Button type="submit" variant="hero" size="lg" className="animate-float">
-              Отримати безкоштовно 
+            
+            <Button
+              type="submit"
+              className="
+                absolute right-1 top-1/2 -translate-y-1/2
+                w-[306px] h-[55px] 
+                rounded-[56px] 
+                bg-[#4A3AFF] 
+                text-white 
+                font-dm-sans font-normal text-[18px] leading-[20px] 
+                px-[32px] pt-[16px] pb-[19px]
+                flex items-center justify-center
+                gap-[8px]
+                hover:scale-10 transition-transform duration-10
+              "
+            >
+              Отримати безкоштовно
             </Button>
           </form>
-          
           <div className="mt-4 flex items-center justify-center gap-3">
-            <Checkbox 
-              id="free-checkbox" 
-              defaultChecked 
-              className="border-white/30 data-[state=checked]:bg-white data-[state=checked]:text-primary"
+            <Checkbox
+              id="free-checkbox"
+              defaultChecked
+              className="
+                w-6 h-6 rounded-full 
+                border-2 border-[#4A3AFF] 
+                bg-[#4A3AFF] 
+                data-[state=unchecked]:bg-white 
+                data-[state=checked]:bg-[#4A3AFF]
+                data-[state=checked]:text-white
+              "
             />
             <label 
               htmlFor="free-checkbox" 
               className="text-center cursor-pointer"
               style={{
-              
                 fontFamily: 'DM Sans',
                 fontWeight: 400,
                 fontSize: '16px',
                 lineHeight: '23px',
                 textDecoration: 'underline',
-                color: 'white',
+                color: '#4A3AFF',
                 padding: '2px 8px',
                 borderRadius: '4px'
               }}
             >
               Безкоштовно
             </label>
-            <span className="text-white/90 text-sm">
+            <span className="text-white/90 text-sm" style={{ color: "#6F6C90" }}>
               Жодного спаму - лише підтримка на місяць
             </span>
           </div>
