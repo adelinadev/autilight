@@ -58,7 +58,7 @@ const HeroSection = () => {
             </h2>
           </div>
 
-          <p className="font-dm-sans  min-w-877 text-[18px] mb-8 text-white/90 drop-shadow-md mx-auto leading-relaxed" style={{ color: "#6F6C90" }}>
+          <p className="font-dm-sans  min-w-877 text-[18px] mb-8 text-white/90 mx-auto leading-relaxed" style={{ color: "#6F6C90" }}>
             Пояснюємо простими словами, що таке аутизм, як його розпізнати та з чого почати допомогу.<br></br> 
             Щоб ваша дитина мала більше шансів заговорити, контактувати, бути собою — у своєму темпі.
           </p>
