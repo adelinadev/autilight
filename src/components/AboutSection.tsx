@@ -1,66 +1,66 @@
 import preview1 from '@/assets/preview-1.png';
 import preview2 from '@/assets/preview-2.png';
 import preview3 from '@/assets/preview-3.png';
+import laptop from '@/assets/laptop.png';
+import fqa from '@/assets/fqa.png';
+import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto space-y-16">
-          
-          {/* First Block: Image + Text */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-            <div className="w-full h-64 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-background to-muted/30">
-              <div className="relative w-full h-full">
-                {/* First image - full height of parent, no gaps */}
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="grid md:grid-cols-[70%_30%]">
+            <div className="flex w-full px-0 mx-0">
+              <div className="w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-background to-muted/30 relative">
                 <img
                   src={preview1}
                   alt="first"
-                  className="h-full w-auto absolute top-0 right-0 z-10 object-cover rounded-xl shadow-xl"
-                  // style={{ border: '1px solid red' }}
+                  className="h-full w-auto absolute top-0 right-0 z-10 object-contain rounded-xl w-full h-auto md:w-auto md:h-full"
                 />
-
-                {/* Second image - overlaps first by 15% from left side */}
                 <img
                   src={preview2}
                   alt="second"
-                  /*className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-xl shadow-xl absolute top-20 right-40 md:right-24 z-20"*/
-                  className="h-full w-auto absolute z-20 object-cover rounded-xl shadow-xl"
+                  className="h-[90%] w-auto absolute z-20 object-contain rounded-xl w-full h-auto md:h-[90%] md:w-auto"
                   style={{
-                    top: '15%',
-                    right: '35%',
+                    top: '8%',
+                    right: '40%',
                   }}
                 />
-
                 <img
                   src={preview3}
                   alt="third"
-                  className="h-auto w-[50%] absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30 object-cover rounded-xl shadow-xl" 
-                /> 
-
+                  className="h-auto w-[65%] absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30 object-contain rounded-xl w-full h-auto md:w-[65%] md:h-auto"
+                />
               </div>
             </div>
-        </div>
 
-            
-            <div className="space-y-6">
+            {/* Блок з текстом */}
+            <div className="mt-10 md:mt-0 flex flex-col items-center md:items-start space-y-4 text-center md:text-left justify-center">
               <div className="text-sm font-medium text-primary tracking-wider uppercase">
                 ЛАСКАВО ПРОСИМО НА НАШ
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p
+                style={{
+                  fontFamily: "'Work Sans', sans-serif", 
+                  fontWeight: 500, 
+                  fontStyle: "normal",
+                  fontSize: "20px",
+                  lineHeight: "120%", 
+                  letterSpacing: "-2%",
+                  color: "1c2d6c"
+                }}
+              >
                 Інформаційний ресурс для батьків дітей із підозрою на РАС та з аутизмом розвитку
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
+              <h4 className="text-m md:text-3xl font-bold leading-tight" style={{color: '#19213D'}}>
                 Перші кроки, підтримка, достовірна інформація.
-              </h2>
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-full text-lg transition-colors">
+              </h4>
+              <button className="hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-full text-lg transition-colors" style={{background: '#4A3AFF'}}>
                 ОТРИМАТИ ДОСТУП
               </button>
             </div>
           </div>
-
-          {/* Middle Block: Information Text */}
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <div className="inline-block border-2 border-primary rounded-lg px-8 py-4 bg-background">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">
@@ -75,61 +75,57 @@ const AboutSection = () => {
           </div>
 
           {/* Third Block: Action Cards */}
-          <div className="space-y-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Read Articles Card */}
-              <div className="bg-primary/5 rounded-2xl p-8 space-y-4 hover:bg-primary/10 transition-colors">
-                <div className="text-sm font-medium text-primary tracking-wider uppercase">
-                  ЧИТАТИ
-                </div>
-                <h4 className="text-xl font-bold text-foreground">
-                  Інформативні статті, створені на основі сучасних наукових даних
-                </h4>
-                <div className="flex justify-center pt-4">
-                  <div className="w-16 h-12 bg-blue-400 rounded-lg flex items-center justify-center">
-                    <div className="w-8 h-6 bg-blue-200 rounded"></div>
+          <div className="space-y-8 flex flex-col items-center">
+            <div className="flex flex-col md:flex-row md:space-x-4">
+              <div className="flex flex-col md:w-[580px] space-y-4">
+                <div className="bg-primary/5 rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px'}}>
+                  <div className="flex flex-col h-full">
+                    <Link to="/articles" className="text-sm hover:underline" >ЧИТАТИ</Link>
+                    <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground">
+                      Інформативні статті, створені на основі сучасних наукових даних
+                    </p>
                   </div>
+                  {/* Права частина: картинка */}
+                  <img src={laptop} alt="Ноутбук" className="h-full object-contain rounded-lg" />
+                </div>
+
+                {/* Другий блок */}
+                <div className="bg-primary/5 rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px'}}>
+                  {/* Ліва частина тексту */}
+                  <div className="flex flex-col h-full">
+                    <Link to="#"className="text-sm hover:underline" style={{ color: '#4A3AFF' }}>ПЕРЕЙТИ ДО ПИТАНЬ</Link>
+                    <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground">
+                      FAQ з відповідями на найпоширеніші питання батьків
+                    </p>
+                  </div>
+                  {/* Права частина: картинка */}
+                  <img src={fqa} alt="Питання" className="h-full object-contain rounded-lg" />
                 </div>
               </div>
 
-              {/* FAQ Card */}
-              <div className="bg-primary/5 rounded-2xl p-8 space-y-4 hover:bg-primary/10 transition-colors">
-                <div className="text-sm font-medium text-primary tracking-wider uppercase">
-                  ПЕРЕЙТИ ДО ПИТАНЬ
-                </div>
-                <h4 className="text-xl font-bold text-foreground">
-                  FAQ з відповідями на найпоширеніші питання батьків
-                </h4>
-                <div className="flex justify-center pt-4">
-                  <div className="w-16 h-16 bg-blue-400 rounded-2xl flex items-center justify-center">
-                    <div className="text-white text-2xl font-bold">?</div>
+              {/* Права частина: один великий блок */}
+              <div className="md:w-[580px] flex flex-col mt-4 md:mt-0">
+                <div className="bg-primary/5 rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors" style={{width: '580px', height: '480px'}}>
+                  <div className="text-sm font-medium text-primary tracking-wider uppercase">
+                    TAGLINE 3
                   </div>
-                </div>
-              </div>
-
-              {/* PDF Guides Card */}
-              <div className="bg-primary/5 rounded-2xl p-8 space-y-4 hover:bg-primary/10 transition-colors">
-                <div className="text-sm font-medium text-primary tracking-wider uppercase">
-                  TAGLINE
-                </div>
-                <h4 className="text-xl font-bold text-foreground">
-                  <span className="text-primary">PDF-гайди</span> які можна завантажити і користуватися у зручний час
-                </h4>
-                <div className="flex justify-center pt-4">
-                  <div className="w-16 h-12 bg-blue-400 rounded-lg flex items-center justify-center">
-                    <div className="w-8 h-8 bg-blue-200 rounded flex items-center justify-center">
-                      <div className="w-4 h-4 bg-blue-600 rounded-sm"></div>
-                    </div>
+                  <h4 className="text-lg font-bold text-foreground">
+                    <span className="text-primary">PDF-гайд 3</span> для зручного використання
+                  </h4>
+                  <div className="pt-2">
+                    <button
+                      className="hover:bg-primary/90 font-bold py-2 px-4 rounded-full text-sm transition-colors w-full"
+                      style={{ background: '#4A3AFF' }}
+                    >
+                      ОТРИМАТИ ДОСТУП
+                    </button>
                   </div>
-                </div>
-                <div className="pt-4">
-                  <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-full text-sm transition-colors w-full">
-                    ОТРИМАТИ ДОСТУП
-                  </button>
                 </div>
               </div>
             </div>
           </div>
+
+          {/*Third Block end*/}
         </div>
       </div>
     </section>

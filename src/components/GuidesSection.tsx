@@ -26,63 +26,66 @@ const GuidesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* First Card - White background */}
-          <Card
-            className="shadow-card hover:shadow-floating transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center justify-center">
+        <Card
+            className="shadow-card hover:shadow-floating transition-all duration-300 transform hover:-translate-y-2 overflow-hidden
+                      w-full max-w-sm sm:max-w-md md:w-[394px] md:h-[660px]"
             style={{
-              width: '394px',
-              height: '660px',
               borderRadius: '24px',
-              border: '1px solid #fffff',
+              border: '1px solid #ffffff',
               background: '#FFFFFF',
               opacity: 1,
-              color: '#6F6C90'
+              color: '#6F6C90',
             }}
           >
-            <div className="p-6 flex flex-col h-full">
+            <div className="p-4 sm:p-6 flex flex-col h-full">
               <div>
-                {/* Header with icon and title */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
-                    <div className="w-8 h-10 bg-gradient-to-b from-purple-600 to-purple-800 rounded-sm"></div>
+                {/* Header */}
+                <div className="flex items-start gap-4 mb-4 sm:mb-6">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center">
+                    <div className="w-6 h-8 sm:w-8 sm:h-10 bg-gradient-to-b from-purple-600 to-purple-800 rounded-sm"></div>
                   </div>
-
                   <div className="flex-1">
-                    <p className=" text-sm mb-1">Розвиток дитини до 3р.</p>
-                    <h4 className="text-lg mb-1">Червоні прапорці</h4>
+                    <p className="text-sm mb-1">Розвиток дитини до 3р.</p>
+                    <h4 className="text-base sm:text-lg mb-1">Червоні прапорці</h4>
                   </div>
                 </div>
 
-                <p className="text-base mb-6">
+                <p className="text-sm sm:text-base mb-4 sm:mb-6">
                   Все що треба знати батькам для раннього виявлення й упевненіх дій
                 </p>
 
-                <div className="mb-6 relative inline-block">
-                  <span className="text-6xl font-bold text-black relative">
+                <div className="mb-4 sm:mb-6 relative inline-block">
+                  <span className="text-4xl sm:text-6xl font-bold text-black relative">
                     299
-                    <span className="absolute left-0 top-1/2 w-full h-[3px] bg-red-500 rotate-[-20deg] origin-center"></span>
+                    <span className="absolute left-0 top-1/2 w-full h-[2px] sm:h-[3px] bg-red-500 rotate-[-20deg] origin-center"></span>
                   </span>
-                  <span className="text-xl ml-2">грн.</span>
+                  <span className="text-lg sm:text-xl ml-2">грн.</span>
                 </div>
 
-
-                <h4 className="text-lgfont-semibold mb-4">
+                <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
                   Коротко, чітко, без паніки, зрозумійте перші кроки
                 </h4>
 
                 {/* Checklist */}
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-sm sm:text-base">
                   {[
                     'Чіткі червоні прапорці за віком',
                     'Коментарі фахівців',
                     'Поради, що робити далі',
-                    'Бонус: 2 вправі на розвиток'
+                    'Бонус: 2 вправі на розвиток',
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-center">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0" style={{background: '#4A3AFF'}}>
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <div
+                        className="w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0"
+                        style={{ background: '#4A3AFF' }}
+                      >
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </div>
                       <span>{item}</span>
@@ -91,102 +94,92 @@ const GuidesSection = () => {
                 </ul>
               </div>
 
-              {/* Button з відступом 50px від низу */}
-              <div className="mt-auto mb-[50px] flex justify-center">
+              {/* Button */}
+              <div className="mt-auto mb-[30px] sm:mb-[50px] flex justify-center">
                 <Button
-                  className="w-[308px] h-[72px] rounded-[96px] hover:bg-gray-100 text-white font-bold flex items-center justify-center gap-[6px]"
-                  style={{
-                    paddingTop: '26px',
-                    paddingBottom: '26px',
-                    paddingLeft: '38px',
-                    paddingRight: '38px',
-                  }}
-                  onClick={() => handlePurchase('Аутизм? Твій перший гід')}
+                  className="w-full sm:w-[308px] h-[56px] sm:h-[72px] rounded-[96px] hover:bg-gray-100 
+                            text-white font-bold flex items-center justify-center gap-[6px]"
+                            style={{background: '#4A3AFF'}}
                 >
                   ОТРИМАТИ БЕЗКОШТОВНО
                 </Button>
               </div>
             </div>
-        </Card>
+          </Card>
 
-          {/* Second Card - Purple gradient background */}
+          {/* ==================== Друга картка ==================== */}
+
           <Card
-            className="shadow-card hover:shadow-floating transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+            className="shadow-card hover:shadow-floating transition-all duration-300 transform hover:-translate-y-2 overflow-hidden
+                      w-full max-w-sm sm:max-w-md md:w-[394px] md:h-[660px]"
             style={{
-              width: '394px',
-              height: '660px',
               borderRadius: '24px',
               border: '1px solid #4A3AFF',
               background: '#4A3AFF',
               opacity: 1,
             }}
           >
-            <div className="p-6 flex flex-col h-full">
+            <div className="p-4 sm:p-6 flex flex-col h-full">
               <div>
-                {/* Header with icon and title */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
-                    <div className="w-8 h-10 bg-gradient-to-b from-purple-600 to-purple-800 rounded-sm"></div>
+                {/* Header */}
+                <div className="flex items-start gap-4 mb-4 sm:mb-6">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center">
+                    <div className="w-6 h-8 sm:w-8 sm:h-10 bg-gradient-to-b from-purple-600 to-purple-800 rounded-sm"></div>
                   </div>
-
                   <div className="flex-1">
-                    <p className="text-purple-100 text-sm mb-1">Інформація для батьків</p>
-                    <h4 className="text-white text-lg mb-1">Аутизм?</h4>
-                    <h3 className="text-white text-2xl font-bold">Твій перший гід</h3>
+                    <p className="text-purple-100 text-xs sm:text-sm mb-1">Інформація для батьків</p>
+                    <h4 className="text-white text-base sm:text-lg mb-1">Аутизм?</h4>
+                    <h3 className="text-white text-lg sm:text-2xl font-bold">Твій перший гід</h3>
                   </div>
                 </div>
 
-                <p className="text-purple-100 text-base mb-6">
-                  Ваш вибір — ваша підтримка
-                </p>
+                <p className="text-purple-100 text-sm sm:text-base mb-4 sm:mb-6">Ваш вибір — ваша підтримка</p>
 
-                <div className="mb-6">
-                  <span className="text-white text-6xl font-bold">349</span>
-                  <span className="text-purple-200 text-xl ml-2">грн.</span>
+                <div className="mb-4 sm:mb-6">
+                  <span className="text-white text-4xl sm:text-6xl font-bold">349</span>
+                  <span className="text-purple-200 text-lg sm:text-xl ml-2">грн.</span>
                 </div>
 
-                <h4 className="text-white text-lg font-semibold mb-4">
+                <h4 className="text-white text-base sm:text-lg font-semibold mb-3 sm:mb-4">
                   Повний покроковий план розвитку:
                 </h4>
 
                 {/* Checklist */}
-                <ul className="space-y-3 mb-8">
-                  {[
-                    'Відповіді на часті питання',
-                    '7 розділів',
-                    '17 таблиць та чек-листів',
-                    'Стисла інформація без води'
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-white">{item}</span>
-                    </li>
-                  ))}
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-sm sm:text-base">
+                  {['Відповіді на часті питання', '7 розділів', '17 таблиць та чек-листів', 'Стисла інформація без води'].map(
+                    (item, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
+                          <svg
+                            className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <span className="text-white">{item}</span>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
 
-              {/* Button з відступом 50px від низу */}
-              <div className="mt-auto mb-[50px] flex justify-center">
+              {/* Button */}
+              <div className="mt-auto mb-[30px] sm:mb-[50px] flex justify-center">
                 <Button
-                  className="w-[308px] h-[72px] rounded-[96px] bg-white hover:bg-gray-100 text-purple-700 font-bold flex items-center justify-center gap-[6px]"
-                  style={{
-                    paddingTop: '26px',
-                    paddingBottom: '26px',
-                    paddingLeft: '38px',
-                    paddingRight: '38px',
-                  }}
-                  onClick={() => handlePurchase('Аутизм? Твій перший гід')}
+                  className="w-full sm:w-[308px] h-[56px] sm:h-[72px] rounded-[96px] bg-white hover:bg-gray-100 
+                            text-purple-700 font-bold flex items-center justify-center gap-[6px]"
                 >
                   ОТРИМАТИ ДОСТУП
                 </Button>
               </div>
             </div>
-        </Card>
-
+          </Card>
 
         </div>
       </div>

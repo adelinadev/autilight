@@ -37,14 +37,23 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           <div className="text-center mb-8">
-            <h1 className="font-dm-sans font-bold text-[16px] leading-[18px] tracking-[0.24em] uppercase" style={{ color: "#4A3AFF" }}>
+            <h1 
+              className="font-dm-sans font-bold text-xs sm:text-sm md:text-base tracking-[0.24em] uppercase mb-3"
+              style={{ color: "#4A3AFF" }}
+            >
               безпечний простір для батьків
             </h1>
-            
-            <h2 className="font-dm-sans text-[50px] font-bold" style={{ color: "#19213D" }}>
+
+            <h2 
+              className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-5xl leading-tight mb-2"
+              style={{ color: "#19213D" }}
+            >
               Коли діагноз — не вирок
             </h2>
-            <h2 className="font-dm-sans text-[50px] font-bold" style={{ color: "#19213D" }}>
+            <h2 
+              className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-5xl leading-tight mb-6"
+              style={{ color: "#19213D" }}
+            >
               Це лише початок шляху до розвитку
             </h2>
           </div>
@@ -54,41 +63,46 @@ const HeroSection = () => {
             Щоб ваша дитина мала більше шансів заговорити, контактувати, бути собою — у своєму темпі.
           </p>
           <form onSubmit={handleSubmit} className="max-w-[700px] mx-auto relative">
-            <Input
-              type="email"
-              placeholder="ваш e-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="
-                w-full h-[78px] 
-                rounded-[60px] 
-                border border-[#EFF0F6] 
-                bg-[#FFFFFF] 
-                px-6
-                text-foreground placeholder:text-muted-foreground
-                shadow-[0px_8px_25px_0px_#0D0A2C0F]
-              "
-            />
-            
-            <Button
-              type="submit"
-              className="
-                absolute right-1 top-1/2 -translate-y-1/2
-                w-[306px] h-[55px] 
-                rounded-[56px] 
-                bg-[#4A3AFF] 
-                text-white 
-                font-dm-sans font-normal text-[18px] leading-[20px] 
-                px-[32px] pt-[16px] pb-[19px]
-                flex items-center justify-center
-                gap-[8px]
-                hover:scale-10 transition-transform duration-10
-              "
-            >
-              Отримати безкоштовно
-            </Button>
+            <div className="flex flex-col sm:flex-row sm:relative gap-3 sm:gap-0">
+              <Input
+                type="email"
+                placeholder="ваш e-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="
+                  w-full h-[56px] sm:h-[78px] 
+                  rounded-[40px] sm:rounded-[60px] 
+                  border border-[#EFF0F6] 
+                  bg-[#FFFFFF] 
+                  px-4 sm:px-6
+                  text-sm sm:text-base
+                  text-foreground placeholder:text-muted-foreground
+                  shadow-[0px_8px_25px_0px_#0D0A2C0F]
+                "
+              />
+
+              <Button
+                type="submit"
+                className="
+                  w-full sm:w-[306px] 
+                  h-[48px] sm:h-[55px] 
+                  rounded-[40px] sm:rounded-[56px] 
+                  bg-[#4A3AFF] 
+                  text-white 
+                  font-dm-sans font-normal text-sm sm:text-[18px] leading-[20px] 
+                  px-6 sm:px-[32px]
+                  flex items-center justify-center
+                  gap-[6px] sm:gap-[8px]
+                  hover:scale-105 transition-transform duration-200
+                  sm:absolute sm:right-1 sm:top-1/2 sm:-translate-y-1/2
+                "
+              >
+                Отримати безкоштовно
+              </Button>
+            </div>
           </form>
+
           <div className="mt-4 flex items-center justify-center gap-3">
             <Checkbox
               id="free-checkbox"

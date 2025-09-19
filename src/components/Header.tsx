@@ -63,7 +63,7 @@ const Header = () => {
             onClick={() => scrollToSection('faq')} 
             className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
           >
-            FAQ
+            Часті питання
           </a>
           <Button variant="cta" onClick={() => scrollToSection('faq')} className="
                 w-[317px] h-[55px] 
