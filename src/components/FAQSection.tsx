@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import preview4 from '@/assets/preview-4.png';
 import preview5 from '@/assets/preview-5.png';
+import openartImage from '@/assets/openart-image.png';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -92,9 +93,9 @@ const FAQSection = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 py-6 mt-2 rounded-2xl" style={{ 
-                  background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)'
+                  background: 'white'
                 }}>
-                  <div className="text-white leading-relaxed">
+                  <div className="text-black leading-relaxed">
                     {faq.answer}
                   </div>
                 </AccordionContent>
@@ -104,42 +105,57 @@ const FAQSection = () => {
         </div>
 
         {/* Call to Action Section */}
-        <div className="rounded-3xl p-6 md:p-8 lg:p-12 relative overflow-hidden" style={{ 
-          background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)'
-        }}>
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12">
-            <div className="flex-1 text-center lg:text-left lg:max-w-lg">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
-                Помітили щось тривожне?
-              </h3>
-              <p className="text-lg md:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed">
-                Завантажте гід і дізнайтесь, як вчасно підтримати розвиток вашої дитини.
-              </p>
-              <Button 
-                onClick={handleGetGuide}
-                className="bg-white hover:bg-gray-100 text-purple-700 font-bold py-4 px-8 rounded-full text-lg w-full sm:w-auto"
-              >
-                ОТРИМАТИ БЕЗКОШТОВНО
-              </Button>
-            </div>
-            <div className="flex-shrink-0 flex lg:justify-end">
-              <img 
-                src={preview4} 
-                alt="PDF Guide Preview" 
-                className="h-full w-auto absolute top-0 right-0 z-10 object-cover rounded-xl"
-              />
-              <img 
-                src={preview5} 
-                alt="PDF Guide Preview" 
-                className="h-full w-auto absolute top-50% right-90% z-10 object-cover rounded-xl"
-                style={{
-                  top: '70%',
-                  right: '20%'
-                }}
-              />
-            </div>
-          </div>
-        </div>
+        <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden h-auto">
+  {/* Ліва колонка */}
+  <div className="flex-1 p-6 md:p-8 lg:p-12 flex flex-col justify-center text-center lg:text-left"
+       style={{ backgroundColor: '#5242FF' }}>
+    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
+      Помітили щось тривожне?
+    </h3>
+    <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
+      Завантажте гід і дізнайтесь, як вчасно підтримати розвиток вашої дитини.
+    </p>
+    <Button
+      onClick={handleGetGuide}
+      className="bg-white hover:bg-gray-100 text-purple-700 font-bold py-3 px-6 rounded-full text-base md:text-lg w-full sm:w-auto"
+    >
+      ОТРИМАТИ БЕЗКОШТОВНО
+    </Button>
+  </div>
+
+  {/* Права колонка */}
+  <div
+    className="flex-1 relative flex justify-center items-center p-6 md:p-8 lg:p-12 bg-cover bg-center"
+    style={{
+      backgroundColor: '#5242FF',
+      backgroundImage: `url(${openartImage})`, // фонова картинка
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
+    }}
+  >
+    {/* Перша картинка */}
+    <img
+      src={preview4}
+      alt="PDF Guide Preview"
+      className="w-40 h-40 md:w-56 md:h-56 lg:w-auto lg:h-full rounded-xl object-cover z-10"
+    />
+    {/* Друга картинка */}
+    <img
+      src={preview5}
+      alt="PDF Guide Preview"
+      className="w-40 h-40 md:w-56 md:h-56 lg:w-auto lg:h-full rounded-xl object-cover absolute top-2/4 left-1/4 lg:top-[70%] lg:right-[20%] z-20 transform -translate-y-1/2"
+    />
+  </div>
+</div>
+
+
+
+
+        
+
+
+
       </div>
     </section>
   );

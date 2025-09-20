@@ -3,6 +3,7 @@ import preview2 from '@/assets/preview-2.png';
 import preview3 from '@/assets/preview-3.png';
 import laptop from '@/assets/laptop.png';
 import fqa from '@/assets/fqa.png';
+import IconContainer from '@/assets/IconContainer.png';
 import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
@@ -76,12 +77,12 @@ const AboutSection = () => {
 
           {/* Third Block: Action Cards */}
           <div className="space-y-8 flex flex-col items-center">
-            <div className="flex flex-col md:flex-row md:space-x-4">
-              <div className="flex flex-col md:w-[580px] space-y-4">
-                <div className="bg-primary/5 rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px'}}>
-                  <div className="flex flex-col h-full">
-                    <Link to="/articles" className="text-sm hover:underline" >ЧИТАТИ</Link>
-                    <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground">
+            <div className="flex flex-col md:flex-row md:space-x-4 ">
+              <div className="flex flex-col md:w-[580px] space-y-4 mb-4">
+                <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px', background: '#EEF1FF'}}>
+                  <div className="flex flex-col h-full justify-center">
+                    <Link to="/articles" className="text-sm hover:underline" style={{ color: '#4A3AFF' }} >ЧИТАТИ</Link>
+                    <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground" style={{color: '#19213D'}}>
                       Інформативні статті, створені на основі сучасних наукових даних
                     </p>
                   </div>
@@ -90,11 +91,11 @@ const AboutSection = () => {
                 </div>
 
                 {/* Другий блок */}
-                <div className="bg-primary/5 rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px'}}>
+                <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px', background: '#EEF1FF'}}>
                   {/* Ліва частина тексту */}
-                  <div className="flex flex-col h-full">
+                  <div className="flex flex-col h-full justify-center">
                     <Link to="#"className="text-sm hover:underline" style={{ color: '#4A3AFF' }}>ПЕРЕЙТИ ДО ПИТАНЬ</Link>
-                    <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground">
+                    <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground" style={{color: '#19213D'}}>
                       FAQ з відповідями на найпоширеніші питання батьків
                     </p>
                   </div>
@@ -104,28 +105,49 @@ const AboutSection = () => {
               </div>
 
               {/* Права частина: один великий блок */}
-              <div className="md:w-[580px] flex flex-col mt-4 md:mt-0">
-                <div className="bg-primary/5 rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors" style={{width: '580px', height: '480px'}}>
-                  <div className="text-sm font-medium text-primary tracking-wider uppercase">
-                    TAGLINE 3
-                  </div>
-                  <h4 className="text-lg font-bold text-foreground">
-                    <span className="text-primary">PDF-гайд 3</span> для зручного використання
-                  </h4>
-                  <div className="pt-2">
-                    <button
-                      className="hover:bg-primary/90 font-bold py-2 px-4 rounded-full text-sm transition-colors w-full"
-                      style={{ background: '#4A3AFF' }}
+              <div
+                className="rounded-2xl p-6 hover:bg-primary/10 transition-all duration-300 
+                          flex flex-col md:w-[580px] 
+                          h-[230px] md:h-[475px]"
+                style={{ background: '#EEF1FF' }}>
+                {/* Верхня частина */}
+                <div className="flex items-center justify-between h-full md:h-auto">
+                  {/* Текст */}
+                  <div className="flex flex-col justify-center">
+                    <div className="text-sm font-medium tracking-wider uppercase" style={{ color: '#9795B5' }}>
+                      TAGLINE
+                    </div>
+                    <h1
+                      className="font-dm-sans font-bold text-[22px] md:text-3xl leading-[28px] md:leading-[36px]"
+                      style={{ color: '#19213D', maxWidth: '300px', marginTop: '10px' }}
                     >
-                      ОТРИМАТИ ДОСТУП
-                    </button>
+                      PDF-гайд які можна завантажити і користуватися у зручний час
+                    </h1>
                   </div>
+
+                  {/* Картинка */}
+                  <img
+                    src={IconContainer}
+                    alt="Питання"
+                    className="h-full object-contain rounded-lg 
+                              md:w-[230px] md:h-[230px]"
+                  />
+                </div>
+
+                {/* Кнопка */}
+                <div className="flex justify-start md:mt-auto">
+                  <button
+                    className="hover:bg-primary/90 text-primary-foreground font-bold 
+                              py-2 px-4 md:py-3 md:px-8 
+                              rounded-full text-sm md:text-lg transition-colors"
+                    style={{ background: '#4A3AFF', color: '#fff' }}
+                  >
+                    ОТРИМАТИ ДОСТУП
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
-          {/*Third Block end*/}
         </div>
       </div>
     </section>

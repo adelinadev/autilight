@@ -94,7 +94,7 @@ const HeroSection = () => {
                   px-6 sm:px-[32px]
                   flex items-center justify-center
                   gap-[6px] sm:gap-[8px]
-                  hover:scale-105 transition-transform duration-200
+                 
                   sm:absolute sm:right-1 sm:top-1/2 sm:-translate-y-1/2
                 "
               >
