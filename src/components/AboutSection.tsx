@@ -78,8 +78,9 @@ const AboutSection = () => {
           {/* Third Block: Action Cards */}
           <div className="space-y-8 flex flex-col items-center">
             <div className="flex flex-col md:flex-row md:space-x-4 ">
+              
               <div className="flex flex-col md:w-[580px] space-y-4 mb-4">
-                <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px', background: '#EEF1FF'}}>
+                <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between w-full md:w-[580px]" style={{height: '230px', background: '#EEF1FF'}}>
                   <div className="flex flex-col h-full justify-center">
                     <Link to="/articles" className="text-sm hover:underline" style={{ color: '#4A3AFF' }} >ЧИТАТИ</Link>
                     <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground" style={{color: '#19213D'}}>
@@ -87,11 +88,11 @@ const AboutSection = () => {
                     </p>
                   </div>
                   {/* Права частина: картинка */}
-                  <img src={laptop} alt="Ноутбук" className="h-full object-contain rounded-lg" />
+                  <img src={laptop} alt="Ноутбук" className="max-h-[160px] object-contain rounded-lg" />
                 </div>
 
                 {/* Другий блок */}
-                <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between" style={{width: '580px', height: '230px', background: '#EEF1FF'}}>
+                <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between w-full md:w-[580px]" style={{height: '230px', background: '#EEF1FF'}}>
                   {/* Ліва частина тексту */}
                   <div className="flex flex-col h-full justify-center">
                     <Link to="#"className="text-sm hover:underline" style={{ color: '#4A3AFF' }}>ПЕРЕЙТИ ДО ПИТАНЬ</Link>
@@ -100,52 +101,59 @@ const AboutSection = () => {
                     </p>
                   </div>
                   {/* Права частина: картинка */}
-                  <img src={fqa} alt="Питання" className="h-full object-contain rounded-lg" />
+                  <img src={fqa} alt="Питання" className="max-h-[160px] object-contain rounded-lg" />
                 </div>
               </div>
 
               {/* Права частина: один великий блок */}
+
+
               <div
-                className="rounded-2xl p-6 hover:bg-primary/10 transition-all duration-300 
-                          flex flex-col md:w-[580px] 
-                          h-[230px] md:h-[475px]"
-                style={{ background: '#EEF1FF' }}>
-                {/* Верхня частина */}
-                <div className="flex items-center justify-between h-full md:h-auto">
-                  {/* Текст */}
-                  <div className="flex flex-col justify-center">
+                className="rounded-2xl p-6 hover:bg-primary/10 transition-all duration-300
+                          flex flex-col md:w-[580px] md:h-[475px] bg-[#EEF1FF]">
+                {/* Верхня частина: текст + картинка (рядок на мобілці) */}
+                <div className="flex items-start justify-between gap-4">
+                  {/* Текстова частина */}
+                  <div className="flex-1">
                     <div className="text-sm font-medium tracking-wider uppercase" style={{ color: '#9795B5' }}>
                       TAGLINE
                     </div>
                     <h1
-                      className="font-dm-sans font-bold text-[22px] md:text-3xl leading-[28px] md:leading-[36px]"
-                      style={{ color: '#19213D', maxWidth: '300px', marginTop: '10px' }}
+                      className="font-dm-sans font-bold text-[22px] md:text-3xl leading-[28px] md:leading-[36px] mt-2"
+                      style={{ color: '#19213D', maxWidth: '300px' }}
                     >
                       PDF-гайд які можна завантажити і користуватися у зручний час
                     </h1>
                   </div>
 
-                  {/* Картинка */}
-                  <img
-                    src={IconContainer}
-                    alt="Питання"
-                    className="h-full object-contain rounded-lg 
-                              md:w-[230px] md:h-[230px]"
-                  />
+                  {/* Контейнер з картинкою: фіксований розмір на мобілці/десктопі */}
+                  <div className="flex-shrink-0 flex items-center">
+                    <img
+                      src={IconContainer}
+                      alt="Питання"
+                      className="object-contain rounded-lg
+                                w-[230px] h-[230px]            /* мобільний розмір */
+                                md:w-[230px] md:h-[230px]"    /* десктопний розмір */
+                    />
+                  </div>
                 </div>
 
-                {/* Кнопка */}
-                <div className="flex justify-start md:mt-auto">
+                {/* Кнопка: в потоці, завжди всередині блоку */}
+                <div className="mt-4 md:mt-auto">
                   <button
-                    className="hover:bg-primary/90 text-primary-foreground font-bold 
-                              py-2 px-4 md:py-3 md:px-8 
-                              rounded-full text-sm md:text-lg transition-colors"
-                    style={{ background: '#4A3AFF', color: '#fff' }}
-                  >
+                    className="w-full md:w-auto
+                              bg-[#4A3AFF] text-white font-bold
+                              py-2 px-6 md:py-3 md:px-8
+                              rounded-full text-sm md:text-lg
+                              hover:bg-[#5B4CFF] transition-colors duration-200">
                     ОТРИМАТИ ДОСТУП
                   </button>
                 </div>
               </div>
+
+
+
+
             </div>
           </div>
         </div>
