@@ -23,7 +23,7 @@ const HeroSection = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden mt-20 sm:mt-0 pt-20 sm:pt-0"
       style={{
         background: `
           radial-gradient(circle at 10% 90%, rgba(74, 58, 255, 0.35), transparent 20%),
@@ -63,7 +63,7 @@ const HeroSection = () => {
             Щоб ваша дитина мала більше шансів заговорити, контактувати, бути собою — у своєму темпі.
           </p>
           <form onSubmit={handleSubmit} className="max-w-[700px] mx-auto relative">
-            <div className="flex flex-col sm:flex-row sm:relative gap-3 sm:gap-0">
+            <div className="flex flex-col sm:flex-row sm:relative gap-3 sm:gap-0 h-[78px]">
               <Input
                 type="email"
                 placeholder="ваш e-mail"
@@ -94,12 +94,12 @@ const HeroSection = () => {
                   px-6 sm:px-[32px]
                   flex items-center justify-center
                   gap-[6px] sm:gap-[8px]
-                 
                   sm:absolute sm:right-1 sm:top-1/2 sm:-translate-y-1/2
                 "
-              >
-                Отримати безкоштовно
+                >
+                  Отримати безкоштовно
               </Button>
+
             </div>
           </form>
 
