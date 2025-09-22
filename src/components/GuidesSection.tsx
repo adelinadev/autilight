@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import circle from '@/assets/circle.png';
+import square from '@/assets/square.png';
 
 const GuidesSection = () => {
   const { toast } = useToast();
@@ -37,13 +39,17 @@ const GuidesSection = () => {
               opacity: 1,
               color: '#6F6C90',
             }}
-          >
+            >
             <div className="p-4 sm:p-6 flex flex-col h-full">
               <div>
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-4 sm:mb-6">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center">
-                    <div className="w-6 h-8 sm:w-8 sm:h-10 bg-gradient-to-b from-purple-600 to-purple-800 rounded-sm"></div>
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center" style={{background: '#ECEBFF'}}>
+                    <img 
+                      src={circle} 
+                      alt="Icon" 
+                      className="w-6 h-6 sm:w-8 sm:h-8 object-cover rounded-lg" 
+                    />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm mb-1">Розвиток дитини до 3р.</p>
@@ -118,13 +124,18 @@ const GuidesSection = () => {
               background: '#4A3AFF',
               opacity: 1,
             }}
-          >
+            >
             <div className="p-4 sm:p-6 flex flex-col h-full">
               <div>
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-4 sm:mb-6">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center">
-                    <div className="w-6 h-8 sm:w-8 sm:h-10 bg-gradient-to-b from-purple-600 to-purple-800 rounded-sm"></div>
+
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center" style={{background: '#ECEBFF'}}>
+                    <img 
+                      src={square} 
+                      alt="Icon" 
+                      className="w-6 h-6 sm:w-8 sm:h-8 object-cover rounded-lg" 
+                    />
                   </div>
                   <div className="flex-1">
                     <p className="text-purple-100 text-xs sm:text-sm mb-1">Інформація для батьків</p>
