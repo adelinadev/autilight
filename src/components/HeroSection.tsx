@@ -45,20 +45,20 @@ const HeroSection = () => {
             </h1>
 
             <h2 
-              className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-5xl leading-tight mb-2"
+              className="font-dm-sans font-bold text-4xl sm:text-3xl md:text-5xl leading-tight mb-2"
               style={{ color: "#19213D" }}
             >
               Коли діагноз — не вирок
             </h2>
             <h2 
-              className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-5xl leading-tight mb-6"
+              className="font-dm-sans font-bold text-4xl sm:text-3xl md:text-5xl leading-tight mb-6"
               style={{ color: "#19213D" }}
             >
               Це лише початок шляху до розвитку
             </h2>
           </div>
 
-          <p className="font-dm-sans  min-w-877 text-[18px] mb-8 text-white/90 mx-auto leading-relaxed" style={{ color: "#6F6C90" }}>
+          <p className="font-dm-sans  min-w-877 text-[16px] mb-8 text-white/90 mx-auto leading-relaxed" style={{ color: "#6F6C90" }}>
             Пояснюємо простими словами, що таке аутизм, як його розпізнати та з чого почати допомогу.<br></br> 
             Щоб ваша дитина мала більше шансів заговорити, контактувати, бути собою — у своєму темпі.
           </p>

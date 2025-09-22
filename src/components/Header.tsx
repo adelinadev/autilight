@@ -43,25 +43,25 @@ const Header = () => {
         <div className="hidden md:flex items-center space-x-8">
         <a 
             onClick={() => scrollToSection('guides')} 
-            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+            className="font-dm-sans font-normal text-[18px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
           >
             PDF Гайди
           </a>
           <a 
             onClick={() => scrollToSection('about')} 
-            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+            className="font-dm-sans font-normal text-[18px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
           >
             Про проєкт
           </a>
           <a 
             onClick={() => scrollToSection('articles')} 
-            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+            className="font-dm-sans font-normal text-[18px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
           >
             Статті
           </a>
           <a 
             onClick={() => scrollToSection('faq')} 
-            className="font-dm-sans font-normal text-[20px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
+            className="font-dm-sans font-normal text-[18px] leading-[20px] text-[#170F49] hover:text-primary transition-colors duration-300 cursor-pointer"
           >
             Часті питання
           </a>

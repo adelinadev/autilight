@@ -1,6 +1,3 @@
-
-
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,13 +24,10 @@ const App = () => (
           {/* Сторінка зі списком статей */}
           <Route path="/articles" element={<ArticlesSection />} />
 
-          {/* Окремі статті */}
-          <Route path="/articles/sensory-processing" element={<ArticlePage id="sensory-processing" />} />
-          <Route path="/articles/communication-styles" element={<ArticlePage id="communication-styles" />} />
-          <Route path="/articles/strengths-based" element={<ArticlePage id="strengths-based" />} />
-          <Route path="/articles/transition-support" element={<ArticlePage id="transition-support" />} />
+          {/* Динамічний маршрут для окремих статей */}
+          <Route path="/articles/:articleId" element={<ArticlePage />} />
 
-          {/* Catch-all */}
+          {/* Сторінка 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
@@ -42,4 +36,3 @@ const App = () => (
 );
 
 export default App;
-

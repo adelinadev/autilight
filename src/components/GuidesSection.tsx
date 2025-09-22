@@ -130,7 +130,7 @@ const GuidesSection = () => {
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-4 sm:mb-6">
 
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center" style={{background: '#ECEBFF'}}>
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center" style={{background: '#ECEBFF'}}>
                     <img 
                       src={square} 
                       alt="Icon" 
@@ -184,7 +184,7 @@ const GuidesSection = () => {
               <div className="mt-auto mb-[30px] sm:mb-[50px] flex justify-center">
                 <Button
                   className="w-full sm:w-[308px] h-[56px] sm:h-[72px] rounded-[96px] bg-white hover:bg-gray-100 
-                            text-purple-700 font-bold flex items-center justify-center gap-[6px]"
+                             font-bold flex items-center justify-center gap-[6px]" style={{color: '#4A3AFF'}}
                 >
                   ОТРИМАТИ ДОСТУП
                 </Button>

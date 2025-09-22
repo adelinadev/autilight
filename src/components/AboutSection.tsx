@@ -109,7 +109,7 @@ const AboutSection = () => {
 
 
               <div
-                className="rounded-2xl p-6 hover:bg-primary/10 transition-all duration-300
+                className="rounded-2xl p-6
                           flex flex-col md:w-[580px] md:h-[475px] bg-[#EEF1FF]">
                 {/* Верхня частина: текст + картинка (рядок на мобілці) */}
                 <div className="flex items-start justify-between gap-4">
