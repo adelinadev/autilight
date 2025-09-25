@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import preview4 from '@/assets/preview-4.png';
 import preview5 from '@/assets/preview-5.png';
 import openartImage from '@/assets/openart-image.png';
 import { Button } from "@/components/ui/button";
@@ -136,15 +135,9 @@ const FAQSection = () => {
   >
     {/* Перша картинка */}
     <img
-      src={preview4}
-      alt="PDF Guide Preview"
-      className="w-40 h-40 md:w-56 md:h-56 lg:w-auto lg:h-full rounded-xl object-cover z-10"
-    />
-    {/* Друга картинка */}
-    <img
       src={preview5}
       alt="PDF Guide Preview"
-      className="w-40 h-40 md:w-56 md:h-56 lg:w-auto lg:h-full rounded-xl object-cover absolute top-2/4 left-1/4 lg:top-[70%] lg:right-[20%] z-20 transform -translate-y-1/2"
+      className="w-40 h-full md:w-56 lg:w-auto lg:h-full rounded-xl object-cover z-10"
     />
   </div>
 </div>

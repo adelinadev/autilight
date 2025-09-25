@@ -7,7 +7,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ArticlesSection from "./components/ArticlesSection";
-import ArticlePage from "./components/ArticlePage";
+
 
 const queryClient = new QueryClient();
 
@@ -24,8 +24,7 @@ const App = () => (
           {/* Сторінка зі списком статей */}
           <Route path="/articles" element={<ArticlesSection />} />
 
-          {/* Динамічний маршрут для окремих статей */}
-          <Route path="/articles/:articleId" element={<ArticlePage />} />
+
 
           {/* Сторінка 404 */}
           <Route path="*" element={<NotFound />} />

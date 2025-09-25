@@ -1,6 +1,5 @@
-import preview1 from '@/assets/preview-1.png';
-import preview2 from '@/assets/preview-2.png';
-import preview3 from '@/assets/preview-3.png';
+import preview1 from '@/assets/preview-12.png';
+import preview2 from '@/assets/preview-11.png';
 import laptop from '@/assets/laptop.png';
 import fqa from '@/assets/fqa.png';
 import IconContainer from '@/assets/IconContainer.png';
@@ -11,27 +10,22 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto space-y-16">
-          <div className="grid md:grid-cols-[70%_30%]">
-            <div className="flex w-full px-0 mx-0">
+          <div className="grid md:grid-cols-[60%_40%]">
+            <div className="flex w-full px-0 mx-0" style={{color: '#19213D'}}>
               <div className="w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-background to-muted/30 relative">
                 <img
                   src={preview1}
                   alt="first"
-                  className="h-full w-auto absolute top-0 right-0 z-10 object-contain rounded-xl w-full h-auto md:w-auto md:h-full"
+                  className="h-[100%] w-auto absolute top-0 right-30 z-10 object-contain rounded-xl w-auto h-full md:w-auto md:h-full"
                 />
                 <img
                   src={preview2}
                   alt="second"
-                  className="h-[90%] w-auto absolute z-20 object-contain rounded-xl w-full h-auto md:h-[90%] md:w-auto"
+                  className="h-[35%] w-auto absolute z-20 object-contain rounded-xl"
                   style={{
-                    top: '8%',
-                    right: '40%',
+                    top: '65%',
+                    left: '10%',
                   }}
-                />
-                <img
-                  src={preview3}
-                  alt="third"
-                  className="h-auto w-[65%] absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30 object-contain rounded-xl w-full h-auto md:w-[65%] md:h-auto"
                 />
               </div>
             </div>
@@ -57,7 +51,7 @@ const AboutSection = () => {
               <h4 className="text-m md:text-3xl font-bold leading-tight" style={{color: '#19213D'}}>
                 Перші кроки, підтримка, достовірна інформація.
               </h4>
-              <button className="hover:bg-primary/90 text-primary-foreground font-bold py-3 px-8 rounded-full text-lg transition-colors" style={{background: '#4A3AFF'}}>
+              <button className="hover:bg-primary/90 text-primary-foreground py-3 px-8 rounded-full text-lg transition-colors" style={{background: '#4A3AFF'}}>
                 ОТРИМАТИ ДОСТУП
               </button>
             </div>
@@ -150,10 +144,6 @@ const AboutSection = () => {
                   </button>
                 </div>
               </div>
-
-
-
-
             </div>
           </div>
         </div>
