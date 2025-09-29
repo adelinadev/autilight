@@ -45,13 +45,13 @@ const HeroSection = () => {
             </h1>
 
             <h2 
-              className="font-dm-sans font-bold text-4xl sm:text-3xl md:text-5xl leading-tight mb-2"
+              className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-5xl leading-tight mb-2 whitespace-nowrap"
               style={{ color: "#19213D" }}
             >
               Коли діагноз — не вирок
             </h2>
             <h2 
-              className="font-dm-sans font-bold text-4xl sm:text-3xl md:text-5xl leading-tight mb-6"
+              className="font-dm-sans font-bold text-2xl sm:text-3xl md:text-5xl leading-tight mb-6"
               style={{ color: "#19213D" }}
             >
               Це лише початок шляху до розвитку

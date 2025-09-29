@@ -100,16 +100,15 @@ const AboutSection = () => {
               </div>
 
               {/* Права частина: один великий блок */}
-
-
-              <div
-                className="rounded-2xl p-6
-                          flex flex-col md:w-[580px] md:h-[475px] bg-[#EEF1FF]">
-                {/* Верхня частина: текст + картинка (рядок на мобілці) */}
-                <div className="flex items-start justify-between gap-4">
+              <div className="rounded-2xl p-6 flex flex-col md:w-[580px] md:h-[475px] bg-[#EEF1FF]">
+                {/* Верхня частина: текст + картинка */}
+                <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-4">
                   {/* Текстова частина */}
-                  <div className="flex-1">
-                    <div className="text-sm font-medium tracking-wider uppercase" style={{ color: '#9795B5' }}>
+                  <div className="flex-1 text-center md:text-left">
+                    <div
+                      className="text-sm font-medium tracking-wider uppercase"
+                      style={{ color: '#9795B5' }}
+                    >
                       TAGLINE
                     </div>
                     <h1
@@ -120,30 +119,28 @@ const AboutSection = () => {
                     </h1>
                   </div>
 
-                  {/* Контейнер з картинкою: фіксований розмір на мобілці/десктопі */}
-                  <div className="flex-shrink-0 flex items-center">
+                  {/* Картинка */}
+                  <div className="flex-shrink-0 flex items-center justify-center mt-4 md:mt-0">
                     <img
                       src={IconContainer}
                       alt="Питання"
-                      className="object-contain rounded-lg
-                                w-[230px] h-[230px]            /* мобільний розмір */
-                                md:w-[230px] md:h-[230px]"    /* десктопний розмір */
+                      className="object-contain rounded-lg w-[200px] h-[200px] md:w-[230px] md:h-[230px]"
                     />
                   </div>
                 </div>
 
-                {/* Кнопка: в потоці, завжди всередині блоку */}
-                <div className="mt-4 md:mt-auto">
+                {/* Кнопка */}
+                <div className="mt-6 md:mt-auto flex justify-center md:justify-start">
                   <button
-                    className="w-full md:w-auto
-                              bg-[#4A3AFF] text-white font-bold
-                              py-2 px-6 md:py-3 md:px-8
-                              rounded-full text-sm md:text-lg
-                              hover:bg-[#5B4CFF] transition-colors duration-200">
+                    className="w-full md:w-auto bg-[#4A3AFF] text-white font-bold
+                              py-4 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg
+                              hover:bg-[#5B4CFF] transition-colors duration-200"
+                  >
                     ОТРИМАТИ ДОСТУП
                   </button>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
