@@ -59,7 +59,7 @@ const Footer = () => {
         </Button>
         <Button 
           variant="ghost" 
-          onClick={() => scrollToSection('faq')}
+          onClick={() => scrollToSection('articles')}
           className="justify-start px-0 hover:text-primary text-[18px]"
           style={{color: '#170F49'}}
         >

@@ -76,7 +76,23 @@ const AboutSection = () => {
               <div className="flex flex-col md:w-[580px] space-y-4 mb-4">
                 <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between w-full md:w-[580px]" style={{height: '230px', background: '#EEF1FF'}}>
                   <div className="flex flex-col h-full justify-center">
-                    <Link to="/articles" className="text-sm hover:underline" style={{ color: '#4A3AFF' }} >ЧИТАТИ</Link>
+                    
+                    
+                  <Link
+                    to="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const section = document.getElementById("articles");
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                    className="text-sm hover:underline"
+                    style={{ color: "#4A3AFF" }}>
+                    ЧИТАТИ
+                  </Link>
+
+
                     <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground" style={{color: '#19213D'}}>
                       Інформативні статті, створені на основі сучасних наукових даних
                     </p>
@@ -89,7 +105,23 @@ const AboutSection = () => {
                 <div className="rounded-2xl p-6 space-y-2 hover:bg-primary/10 transition-colors flex items-center justify-between w-full md:w-[580px]" style={{height: '230px', background: '#EEF1FF'}}>
                   {/* Ліва частина тексту */}
                   <div className="flex flex-col h-full justify-center">
-                    <Link to="#"className="text-sm hover:underline" style={{ color: '#4A3AFF' }}>ПЕРЕЙТИ ДО ПИТАНЬ</Link>
+                    
+                  <Link
+                    to="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const section = document.getElementById("faq");
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                    className="text-sm hover:underline"
+                    style={{ color: "#4A3AFF" }}
+                  >
+                    ПЕРЕЙТИ ДО ПИТАНЬ
+                  </Link>
+
+
                     <p className="font-dm-sans font-bold text-[22px] leading-[28px] tracking-[0px] text-foreground" style={{color: '#19213D'}}>
                       FAQ з відповідями на найпоширеніші питання батьків
                     </p>
@@ -109,7 +141,7 @@ const AboutSection = () => {
                       className="text-sm font-medium tracking-wider uppercase"
                       style={{ color: '#9795B5' }}
                     >
-                      TAGLINE
+                      Корисні матеріали
                     </div>
                     <h1
                       className="font-dm-sans font-bold text-[22px] md:text-3xl leading-[28px] md:leading-[36px] mt-2"
